@@ -1,5 +1,6 @@
 {
   "name": "@huuma/icons",
+  "license": "MIT",
   "version": "0.0.1",
   "exports": {
     "pixelarticons/4g": "./src/pixelarticons/4g.ts",
