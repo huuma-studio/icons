@@ -1,7 +1,7 @@
 import type { Props } from "@huuma/ui";
-import { jsx } from "@huuma/ui/jsx-runtime";
+import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
 
-export default function ({ children: _, ...props }: Props) {
+export default function ({ children: _, ...props }: Props): JSX.Element {
   return jsx("svg", {
     width: "24",
     height: "24",
