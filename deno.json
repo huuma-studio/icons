@@ -1,7 +1,7 @@
 {
   "name": "@huuma/icons",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "exports": {
     "./pixelarticons/4g": "./src/pixelarticons/4g.ts",
     "./pixelarticons/4k-box": "./src/pixelarticons/4k-box.ts",
@@ -492,7 +492,7 @@
     "./pixelarticons/zoom-out": "./src/pixelarticons/zoom-out.ts"
   },
   "imports": {
-    "@huuma/ui": "jsr:@huuma/ui@^0.0.23"
+    "@huuma/ui": "jsr:@huuma/ui@^0.1.0"
   },
   "compilerOptions": {
     "jsx": "precompile",
