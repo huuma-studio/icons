@@ -3,6 +3,13 @@
   "license": "MIT",
   "version": "0.1.1",
   "exports": {
+    "./lucide/4g": "./src/lucide/arrow-left.tsx",
+    "./lucide/biceps-flexed": "./src/lucide/biceps-flexed.tsx",
+    "./lucide/bold": "./src/lucide/bold.tsx",
+    "./lucide/building-2": "./src/lucide/building-2.tsx",
+    "./lucide/check": "./src/lucide/check.tsx",
+    "./lucide/chevron-right": "./src/lucide/chevron-right.tsx",
+    "./lucide/construction": "./src/lucide/construction.tsx",
     "./pixelarticons/4g": "./src/pixelarticons/4g.ts",
     "./pixelarticons/4k-box": "./src/pixelarticons/4k-box.ts",
     "./pixelarticons/4k": "./src/pixelarticons/4k.ts",
@@ -492,7 +499,7 @@
     "./pixelarticons/zoom-out": "./src/pixelarticons/zoom-out.ts"
   },
   "imports": {
-    "@huuma/ui": "jsr:@huuma/ui@^0.1.1"
+    "@huuma/ui": "jsr:@huuma/ui@^0.1.34"
   },
   "compilerOptions": {
     "jsx": "precompile",
