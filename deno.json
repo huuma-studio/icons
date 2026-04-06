@@ -1,7 +1,7 @@
 {
   "name": "@huuma/icons",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "exports": {
     "./lucide/4g": "./src/lucide/arrow-left.tsx",
     "./lucide/biceps-flexed": "./src/lucide/biceps-flexed.tsx",
