@@ -1,7 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Check({
+export default function Bold({
   size = 24,
   class: className,
 }: IconProps): JSX.Element {

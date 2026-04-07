@@ -1,6 +1,10 @@
-import { IconProps } from "./icons.ts";
+import type { JSX } from "@huuma/ui/jsx-runtime";
+import type { IconProps } from "./icons.ts";
 
-export default function Plus({ size = 24, class: className }: IconProps) {
+export default function Plus({
+  size = 24,
+  class: className,
+}: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

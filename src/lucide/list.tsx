@@ -1,6 +1,10 @@
-import { IconProps } from "./icons.ts";
+import type { JSX } from "@huuma/ui/jsx-runtime";
+import type { IconProps } from "./icons.ts";
 
-export default function List({ size, class: className }: IconProps) {
+export default function List({
+  size = 24,
+  class: className,
+}: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

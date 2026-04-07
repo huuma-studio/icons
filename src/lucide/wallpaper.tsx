@@ -1,0 +1,28 @@
+import type { JSX } from "@huuma/ui/jsx-runtime";
+import type { IconProps } from "./icons.ts";
+
+export default function Wallpaper({
+  size = 24,
+  class: className,
+}: IconProps): JSX.Element {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={`${size}`}
+      height={`${size}`}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class={className}
+    >
+      <path d="M12 17v4" />
+      <path d="M8 21h8" />
+      <path d="m9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15" />
+      <circle cx="8" cy="9" r="2" />
+      <rect x="2" y="3" width="20" height="14" rx="2" />
+    </svg>
+  );
+}

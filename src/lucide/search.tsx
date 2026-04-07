@@ -1,6 +1,10 @@
-import { IconProps } from "./icons.ts";
+import type { JSX } from "@huuma/ui/jsx-runtime";
+import type { IconProps } from "./icons.ts";
 
-export default function Search({ size = 24, class: className }: IconProps) {
+export default function Search({
+  size = 24,
+  class: className,
+}: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,8 +18,8 @@ export default function Search({ size = 24, class: className }: IconProps) {
       stroke-linejoin="round"
       class={className}
     >
+      <path d="m21 21-4.34-4.34" />
       <circle cx="11" cy="11" r="8" />
-      <path d="m21 21-4.3-4.3" />
     </svg>
   );
 }

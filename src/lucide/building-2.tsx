@@ -1,5 +1,6 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
+
 export default function Building2({
   size = 24,
   class: className,

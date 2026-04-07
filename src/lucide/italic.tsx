@@ -1,6 +1,10 @@
-import { IconProps } from "./icons.ts";
+import type { JSX } from "@huuma/ui/jsx-runtime";
+import type { IconProps } from "./icons.ts";
 
-export default function Italic({ size = 24, class: className }: IconProps) {
+export default function Italic({
+  size = 24,
+  class: className,
+}: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +16,7 @@ export default function Italic({ size = 24, class: className }: IconProps) {
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      className={className}
+      class={className}
     >
       <line x1="19" x2="10" y1="4" y2="4" />
       <line x1="14" x2="5" y1="20" y2="20" />
