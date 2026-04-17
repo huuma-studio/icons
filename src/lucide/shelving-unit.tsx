@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ShelvingUnit({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ShelvingUnit({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ShelvingUnit({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M12 12V9a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
       <path d="M16 20v-3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3" />

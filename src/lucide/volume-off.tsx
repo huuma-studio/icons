@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function VolumeOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function VolumeOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function VolumeOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M16 9a5 5 0 0 1 .95 2.293" />
       <path d="M19.364 5.636a9 9 0 0 1 1.889 9.96" />

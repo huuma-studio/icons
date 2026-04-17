@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ClockArrowUp({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ClockArrowUp({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ClockArrowUp({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M12 6v6l1.56.78" />
       <path d="M13.227 21.925a10 10 0 1 1 8.767-9.588" />

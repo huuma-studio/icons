@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function BeefOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function BeefOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function BeefOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M11.771 6.109a2.5 2.5 0 0 1 3.12 3.12" />
       <path d="M17.852 12.185a6.5 6.5 0 0 0-9.035-9.04" />

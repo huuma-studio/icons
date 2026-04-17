@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function DnaOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function DnaOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function DnaOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M15 2c-1.35 1.5-2.092 3-2.5 4.5L14 8" />
       <path d="m17 6-2.891-2.891" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function PowerOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function PowerOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function PowerOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M18.36 6.64A9 9 0 0 1 20.77 15" />
       <path d="M6.16 6.16a9 9 0 1 0 12.68 12.68" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function CircleUserRound({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function CircleUserRound({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function CircleUserRound({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M17.925 20.056a6 6 0 0 0-11.851.001" />
       <circle cx="12" cy="11" r="4" />

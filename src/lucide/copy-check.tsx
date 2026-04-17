@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function CopyCheck({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function CopyCheck({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function CopyCheck({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m12 15 2 2 4-4" />
       <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Repeat2({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Repeat2({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Repeat2({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m2 9 3-3 3 3" />
       <path d="M13 18H7a2 2 0 0 1-2-2V6" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function CircleArrowOutDownRight({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function CircleArrowOutDownRight({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function CircleArrowOutDownRight({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M12 22a10 10 0 1 1 10-10" />
       <path d="M22 22 12 12" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ScanQrCode({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ScanQrCode({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ScanQrCode({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M17 12v4a1 1 0 0 1-1 1h-4" />
       <path d="M17 3h2a2 2 0 0 1 2 2v2" />

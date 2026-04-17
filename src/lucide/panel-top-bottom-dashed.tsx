@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function PanelTopBottomDashed({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function PanelTopBottomDashed({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function PanelTopBottomDashed({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M14 15h1" />
       <path d="M14 9h1" />

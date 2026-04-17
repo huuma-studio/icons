@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function IceCreamCone({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function IceCreamCone({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function IceCreamCone({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m7 11 4.08 10.35a1 1 0 0 0 1.84 0L17 11" />
       <path d="M17 7A5 5 0 0 0 7 7" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Rat({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Rat({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Rat({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M13 22H4a2 2 0 0 1 0-4h12" />
       <path d="M13.236 18a3 3 0 0 0-2.2-5" />

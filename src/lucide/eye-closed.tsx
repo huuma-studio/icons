@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function EyeClosed({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function EyeClosed({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function EyeClosed({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m15 18-.722-3.25" />
       <path d="M2 8a10.645 10.645 0 0 0 20 0" />

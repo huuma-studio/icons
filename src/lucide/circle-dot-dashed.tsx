@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function CircleDotDashed({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function CircleDotDashed({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function CircleDotDashed({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M10.1 2.18a9.93 9.93 0 0 1 3.8 0" />
       <path d="M17.6 3.71a9.95 9.95 0 0 1 2.69 2.7" />

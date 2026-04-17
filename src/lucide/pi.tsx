@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Pi({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Pi({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Pi({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <line x1="9" x2="9" y1="4" y2="20" />
       <path d="M4 7c0-1.7 1.3-3 3-3h13" />

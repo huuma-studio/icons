@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Orbit({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Orbit({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Orbit({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M20.341 6.484A10 10 0 0 1 10.266 21.85" />
       <path d="M3.659 17.516A10 10 0 0 1 13.74 2.152" />

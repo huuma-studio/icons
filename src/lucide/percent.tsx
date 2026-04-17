@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Percent({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Percent({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Percent({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <line x1="19" x2="5" y1="5" y2="19" />
       <circle cx="6.5" cy="6.5" r="2.5" />

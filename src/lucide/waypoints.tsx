@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Waypoints({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Waypoints({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Waypoints({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m10.586 5.414-5.172 5.172" />
       <path d="m18.586 13.414-5.172 5.172" />

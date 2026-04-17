@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Nfc({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Nfc({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Nfc({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M6 8.32a7.43 7.43 0 0 1 0 7.36" />
       <path d="M9.46 6.21a11.76 11.76 0 0 1 0 11.58" />

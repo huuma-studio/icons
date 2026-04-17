@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Salad({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Salad({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Salad({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M7 21h10" />
       <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" />

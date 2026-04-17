@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Gamepad({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Gamepad({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Gamepad({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <line x1="6" x2="10" y1="12" y2="12" />
       <line x1="8" x2="8" y1="10" y2="14" />

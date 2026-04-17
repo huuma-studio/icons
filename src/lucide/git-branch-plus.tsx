@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function GitBranchPlus({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function GitBranchPlus({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function GitBranchPlus({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M6 3v12" />
       <path d="M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />

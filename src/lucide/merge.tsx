@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Merge({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Merge({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Merge({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m8 6 4-4 4 4" />
       <path d="M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22" />

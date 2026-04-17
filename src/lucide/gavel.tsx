@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Gavel({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Gavel({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Gavel({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m14 13-8.381 8.38a1 1 0 0 1-3.001-3l8.384-8.381" />
       <path d="m16 16 6-6" />

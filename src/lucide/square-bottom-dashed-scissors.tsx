@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SquareBottomDashedScissors({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SquareBottomDashedScissors({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SquareBottomDashedScissors({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <line x1="5" y1="3" x2="19" y2="3" />
       <line x1="3" y1="5" x2="3" y2="19" />

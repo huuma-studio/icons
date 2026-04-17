@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Binary({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Binary({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Binary({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect x="14" y="14" width="4" height="6" rx="2" />
       <rect x="6" y="4" width="4" height="6" rx="2" />

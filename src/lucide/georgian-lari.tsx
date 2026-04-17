@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function GeorgianLari({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function GeorgianLari({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function GeorgianLari({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M11.5 21a7.5 7.5 0 1 1 7.35-9" />
       <path d="M13 12V3" />

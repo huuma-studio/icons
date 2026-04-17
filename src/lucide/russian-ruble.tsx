@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function RussianRuble({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function RussianRuble({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function RussianRuble({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M6 11h8a4 4 0 0 0 0-8H9v18" />
       <path d="M6 15h8" />

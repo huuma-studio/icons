@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ALargeSmall({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ALargeSmall({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ALargeSmall({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m15 16 2.536-7.328a1.02 1.02 1 0 1 1.928 0L22 16" />
       <path d="M15.697 14h5.606" />

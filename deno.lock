@@ -4,9 +4,10 @@
     "jsr:@deno/esbuild-plugin@^1.2.1": "1.2.1",
     "jsr:@deno/loader@~0.3.10": "0.3.14",
     "jsr:@huuma/route@0.1": "0.1.0",
-    "jsr:@huuma/ui@~0.1.34": "0.1.34",
+    "jsr:@huuma/ui@~0.1.36": "0.1.36",
     "jsr:@huuma/validate@~0.1.3": "0.1.5",
     "jsr:@std/cli@^1.0.25": "1.0.28",
+    "jsr:@std/fs@*": "1.0.23",
     "jsr:@std/fs@^1.0.21": "1.0.23",
     "jsr:@std/html@^1.0.5": "1.0.5",
     "jsr:@std/internal@^1.0.12": "1.0.12",
@@ -28,14 +29,14 @@
     "@huuma/route@0.1.0": {
       "integrity": "8cca2b4020c2798aa503899dcf932ce5245100cd367941ad3466bcacf1b6d20a"
     },
-    "@huuma/ui@0.1.34": {
-      "integrity": "2320591360976c56a2b754ba8dd751e9952637417f13b90619ed467085d16a35",
+    "@huuma/ui@0.1.36": {
+      "integrity": "feb9d2701b5e8029ebe5b07ddaa9f5eb338a70100e5f5a32a2f30839f23d1539",
       "dependencies": [
         "jsr:@deno/esbuild-plugin",
         "jsr:@huuma/route",
         "jsr:@huuma/validate",
         "jsr:@std/cli",
-        "jsr:@std/fs",
+        "jsr:@std/fs@^1.0.21",
         "jsr:@std/html",
         "jsr:@std/path@^1.1.4",
         "npm:esbuild"
@@ -233,7 +234,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@huuma/ui@~0.1.34"
+      "jsr:@huuma/ui@~0.1.36"
     ]
   }
 }

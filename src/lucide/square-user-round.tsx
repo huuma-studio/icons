@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SquareUserRound({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SquareUserRound({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SquareUserRound({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M18 21a6 6 0 0 0-12 0" />
       <circle cx="12" cy="11" r="4" />

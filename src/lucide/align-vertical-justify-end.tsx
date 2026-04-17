@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function AlignVerticalJustifyEnd({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function AlignVerticalJustifyEnd({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function AlignVerticalJustifyEnd({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect width="14" height="6" x="5" y="12" rx="2" />
       <rect width="10" height="6" x="7" y="2" rx="2" />

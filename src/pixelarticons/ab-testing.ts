@@ -1,10 +1,10 @@
-import type { Props } from "@huuma/ui";
+import type { IconProps } from "./icons.ts";
 import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
 
-export default function ({ children: _, ...props }: Props): JSX.Element {
+export default function ({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return jsx("svg", {
-    width: "24",
-    height: "24",
+    width: `${size}`,
+    height: `${size}`,
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 24 24",
     ...props,

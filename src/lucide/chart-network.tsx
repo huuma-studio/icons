@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ChartNetwork({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ChartNetwork({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ChartNetwork({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m13.11 7.664 1.78 2.672" />
       <path d="m14.162 12.788-3.324 1.424" />

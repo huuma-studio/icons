@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function TrainFrontTunnel({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function TrainFrontTunnel({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function TrainFrontTunnel({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M2 22V12a10 10 0 1 1 20 0v10" />
       <path d="M15 6.8v1.4a3 2.8 0 1 1-6 0V6.8" />

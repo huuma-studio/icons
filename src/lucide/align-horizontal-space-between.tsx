@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function AlignHorizontalSpaceBetween({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function AlignHorizontalSpaceBetween({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function AlignHorizontalSpaceBetween({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect width="6" height="14" x="3" y="5" rx="2" />
       <rect width="6" height="10" x="15" y="7" rx="2" />

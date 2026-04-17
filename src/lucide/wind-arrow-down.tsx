@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function WindArrowDown({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function WindArrowDown({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function WindArrowDown({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M10 2v8" />
       <path d="M12.8 21.6A2 2 0 1 0 14 18H2" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function KeyboardOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function KeyboardOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function KeyboardOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M 20 4 A2 2 0 0 1 22 6" />
       <path d="M 22 6 L 22 16.41" />

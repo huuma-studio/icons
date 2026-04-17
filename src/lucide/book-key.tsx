@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function BookKey({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function BookKey({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function BookKey({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M13 2H6.5A2.5 2.5 0 0 0 4 4.5v15" />
       <path d="M17 2v6" />

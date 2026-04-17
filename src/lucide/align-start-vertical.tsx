@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function AlignStartVertical({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function AlignStartVertical({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function AlignStartVertical({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect width="9" height="6" x="6" y="14" rx="2" />
       <rect width="16" height="6" x="6" y="4" rx="2" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SquircleDashed({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SquircleDashed({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SquircleDashed({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M13.77 3.043a34 34 0 0 0-3.54 0" />
       <path d="M13.771 20.956a33 33 0 0 1-3.541.001" />

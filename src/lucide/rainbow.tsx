@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Rainbow({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Rainbow({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Rainbow({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M22 17a10 10 0 0 0-20 0" />
       <path d="M6 17a6 6 0 0 1 12 0" />

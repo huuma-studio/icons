@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SaudiRiyal({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SaudiRiyal({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SaudiRiyal({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m20 19.5-5.5 1.2" />
       <path d="M14.5 4v11.22a1 1 0 0 0 1.242.97L20 15.2" />

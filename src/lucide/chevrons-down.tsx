@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ChevronsDown({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ChevronsDown({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ChevronsDown({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m7 6 5 5 5-5" />
       <path d="m7 13 5 5 5-5" />

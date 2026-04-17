@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Radius({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Radius({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Radius({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M20.34 17.52a10 10 0 1 0-2.82 2.82" />
       <circle cx="19" cy="19" r="2" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Hammer({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Hammer({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Hammer({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9" />
       <path d="m18 15 4-4" />

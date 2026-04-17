@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function CornerUpRight({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function CornerUpRight({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function CornerUpRight({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m15 14 5-5-5-5" />
       <path d="M4 20v-7a4 4 0 0 1 4-4h12" />

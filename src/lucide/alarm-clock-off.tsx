@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function AlarmClockOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function AlarmClockOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function AlarmClockOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M6.87 6.87a8 8 0 1 0 11.26 11.26" />
       <path d="M19.9 14.25a8 8 0 0 0-9.15-9.15" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function PointerOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function PointerOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function PointerOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M10 4.5V4a2 2 0 0 0-2.41-1.957" />
       <path d="M13.9 8.4a2 2 0 0 0-1.26-1.295" />

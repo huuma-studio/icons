@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function JapaneseYen({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function JapaneseYen({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function JapaneseYen({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M12 9.5V21m0-11.5L6 3m6 6.5L18 3" />
       <path d="M6 15h12" />

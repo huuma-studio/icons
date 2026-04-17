@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Pause({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Pause({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Pause({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect x="14" y="3" width="5" height="18" rx="1" />
       <rect x="5" y="3" width="5" height="18" rx="1" />

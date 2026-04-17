@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Tablet({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Tablet({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Tablet({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
       <line x1="12" x2="12.01" y1="18" y2="18" />

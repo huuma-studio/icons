@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function FlipVertical2({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function FlipVertical2({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function FlipVertical2({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m17 3-5 5-5-5h10" />
       <path d="m17 21-5-5-5 5h10" />

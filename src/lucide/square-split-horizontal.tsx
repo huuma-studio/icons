@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SquareSplitHorizontal({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SquareSplitHorizontal({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SquareSplitHorizontal({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M8 19H5c-1 0-2-1-2-2V7c0-1 1-2 2-2h3" />
       <path d="M16 5h3c1 0 2 1 2 2v10c0 1-1 2-2 2h-3" />

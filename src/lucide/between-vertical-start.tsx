@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function BetweenVerticalStart({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function BetweenVerticalStart({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function BetweenVerticalStart({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect width="7" height="13" x="3" y="8" rx="1" />
       <path d="m15 2-3 3-3-3" />

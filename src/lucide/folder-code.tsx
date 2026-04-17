@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function FolderCode({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function FolderCode({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function FolderCode({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M10 10.5 8 13l2 2.5" />
       <path d="m14 10.5 2 2.5-2 2.5" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function CaptionsOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function CaptionsOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function CaptionsOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M10.5 5H19a2 2 0 0 1 2 2v8.5" />
       <path d="M17 11h-.5" />

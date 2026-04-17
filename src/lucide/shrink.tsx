@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Shrink({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Shrink({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Shrink({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m15 15 6 6m-6-6v4.8m0-4.8h4.8" />
       <path d="M9 19.8V15m0 0H4.2M9 15l-6 6" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ZodiacVirgo({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ZodiacVirgo({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ZodiacVirgo({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M11 5.5a1 1 0 0 1 5 0V16a5 5 0 0 0 5 5" />
       <path d="M16 11.5a1 1 0 0 1 5 0V16a5 5 0 0 1-5 5" />

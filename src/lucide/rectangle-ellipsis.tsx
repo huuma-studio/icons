@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function RectangleEllipsis({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function RectangleEllipsis({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function RectangleEllipsis({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect width="20" height="12" x="2" y="6" rx="2" />
       <path d="M12 12h.01" />

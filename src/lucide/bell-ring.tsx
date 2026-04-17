@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function BellRing({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function BellRing({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function BellRing({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M10.268 21a2 2 0 0 0 3.464 0" />
       <path d="M22 8c0-2.3-.8-4.3-2-6" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function LocateFixed({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function LocateFixed({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function LocateFixed({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <line x1="2" x2="5" y1="12" y2="12" />
       <line x1="19" x2="22" y1="12" y2="12" />

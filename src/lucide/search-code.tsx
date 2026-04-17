@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SearchCode({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SearchCode({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SearchCode({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m13 13.5 2-2.5-2-2.5" />
       <path d="m21 21-4.3-4.3" />

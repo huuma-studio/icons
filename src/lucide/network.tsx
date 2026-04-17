@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Network({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Network({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Network({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect x="16" y="16" width="6" height="6" rx="1" />
       <rect x="2" y="16" width="6" height="6" rx="1" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function TicketsPlane({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function TicketsPlane({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function TicketsPlane({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M10.5 17h1.227a2 2 0 0 0 1.345-.52L18 12" />
       <path d="m12 13.5 3.794.506" />

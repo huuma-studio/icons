@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SatelliteDish({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SatelliteDish({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SatelliteDish({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M4 10a7.31 7.31 0 0 0 10 10Z" />
       <path d="m9 15 3-3" />

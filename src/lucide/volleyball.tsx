@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Volleyball({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Volleyball({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Volleyball({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M11.1 7.1a16.55 16.55 0 0 1 10.9 4" />
       <path d="M12 12a12.6 12.6 0 0 1-8.7 5" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function RouteOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function RouteOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function RouteOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <circle cx="6" cy="19" r="3" />
       <path d="M9 19h8.5c.4 0 .9-.1 1.3-.2" />

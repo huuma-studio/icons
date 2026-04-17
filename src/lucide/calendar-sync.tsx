@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function CalendarSync({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function CalendarSync({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function CalendarSync({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M11 10v4h4" />
       <path d="m11 14 1.535-1.605a5 5 0 0 1 8 1.5" />

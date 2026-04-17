@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SignpostBig({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SignpostBig({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SignpostBig({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M10 9H4L2 7l2-2h6" />
       <path d="M14 5h6l2 2-2 2h-6" />

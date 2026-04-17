@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ChartBarBig({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ChartBarBig({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ChartBarBig({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M3 3v16a2 2 0 0 0 2 2h16" />
       <rect x="7" y="13" width="9" height="4" rx="1" />

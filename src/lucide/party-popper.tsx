@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function PartyPopper({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function PartyPopper({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function PartyPopper({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M5.8 11.3 2 22l10.7-3.79" />
       <path d="M4 3h.01" />

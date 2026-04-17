@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function BellElectric({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function BellElectric({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function BellElectric({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M18.518 17.347A7 7 0 0 1 14 19" />
       <path d="M18.8 4A11 11 0 0 1 20 9" />

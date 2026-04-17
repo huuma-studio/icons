@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function RadioOff({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function RadioOff({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function RadioOff({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M13.414 13.414a2 2 0 1 1-2.828-2.828" />
       <path d="M16.247 7.761a6 6 0 0 1 1.744 4.572" />

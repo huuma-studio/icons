@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Axis3d({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Axis3d({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Axis3d({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M13.5 10.5 15 9" />
       <path d="M4 4v15a1 1 0 0 0 1 1h15" />

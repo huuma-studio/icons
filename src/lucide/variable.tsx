@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Variable({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Variable({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Variable({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M8 21s-4-3-4-9 4-9 4-9" />
       <path d="M16 3s4 3 4 9-4 9-4 9" />

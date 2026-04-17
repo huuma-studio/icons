@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ServerCog({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ServerCog({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ServerCog({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="m10.852 14.772-.383.923" />
       <path d="M13.148 14.772a3 3 0 1 0-2.296-5.544l-.383-.923" />

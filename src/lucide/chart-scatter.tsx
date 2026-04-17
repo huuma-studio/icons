@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function ChartScatter({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function ChartScatter({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function ChartScatter({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
       <circle cx="18.5" cy="5.5" r=".5" fill="currentColor" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function BookSearch({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function BookSearch({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function BookSearch({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M11 22H5.5a1 1 0 0 1 0-5h4.501" />
       <path d="m21 22-1.879-1.878" />

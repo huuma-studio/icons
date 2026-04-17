@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function Shrub({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function Shrub({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function Shrub({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M12 22v-5.172a2 2 0 0 0-.586-1.414L9.5 13.5" />
       <path d="M14.5 14.5 12 17" />

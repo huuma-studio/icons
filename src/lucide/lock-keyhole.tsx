@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function LockKeyhole({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function LockKeyhole({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function LockKeyhole({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <circle cx="12" cy="16" r="1" />
       <rect x="3" y="10" width="18" height="12" rx="2" />

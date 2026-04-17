@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function GalleryHorizontal({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function GalleryHorizontal({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function GalleryHorizontal({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <path d="M2 3v18" />
       <rect width="12" height="18" x="6" y="3" rx="2" />

@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SmartphoneNfc({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SmartphoneNfc({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SmartphoneNfc({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect width="7" height="12" x="2" y="6" rx="1" />
       <path d="M13 8.32a7.43 7.43 0 0 1 0 7.36" />

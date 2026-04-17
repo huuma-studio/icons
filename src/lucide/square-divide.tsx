@@ -1,10 +1,7 @@
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 
-export default function SquareDivide({
-  size = 24,
-  class: className,
-}: IconProps): JSX.Element {
+export default function SquareDivide({ children: _, size = 24, ...props }: IconProps): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +13,7 @@ export default function SquareDivide({
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class={className}
+      {...props}
     >
       <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
       <line x1="8" x2="16" y1="12" y2="12" />
