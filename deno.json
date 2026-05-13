@@ -2186,7 +2186,7 @@
     "./lucide/zoom-out": "./src/lucide/zoom-out.tsx"
   },
   "imports": {
-    "@huuma/ui": "jsr:@huuma/ui@^0.1.36"
+    "@huuma/ui": "jsr:@huuma/ui@^0.2.1"
   },
   "compilerOptions": {
     "jsx": "precompile",
