@@ -1,4 +1,7 @@
 .zed/*
 svg/*
 .DS_Store
-deno.lock
+node_modules/
+.vite/
+.cache/
+dist/

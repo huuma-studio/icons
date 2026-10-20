@@ -1,0 +1,25 @@
+{
+  "name": "@huuma/icons",
+  "private": true,
+  "description": "Development tooling only. @huuma/icons is published to JSR from jsr.json.",
+  "type": "module",
+  "scripts": {
+    "check": "vp check",
+    "lint": "vp lint",
+    "fmt": "vp fmt",
+    "publish:check": "jsr publish --dry-run --allow-dirty",
+    "release": "jsr publish"
+  },
+  "dependencies": {
+    "@huuma/ui": "npm:@jsr/huuma__ui@^0.2.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "jsr": "0.14.3",
+    "vite-plus": "1.3.0"
+  },
+  "engines": {
+    "node": "^22.18.0 || ^24.11.0 || >=26.0.0"
+  },
+  "packageManager": "pnpm@12.14.0"
+}
