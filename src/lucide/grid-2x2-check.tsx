@@ -1,3 +1,4 @@
+/** @jsxImportSource @huuma/ui */
 import type { JSX } from "@huuma/ui/jsx-runtime";
 import type { IconProps } from "./icons.ts";
 

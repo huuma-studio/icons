@@ -11,7 +11,7 @@
     "release": "jsr publish"
   },
   "dependencies": {
-    "@huuma/ui": "npm:@jsr/huuma__ui@^0.2.11"
+    "@huuma/ui": "npm:@jsr/huuma__ui@^0.3.0"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
