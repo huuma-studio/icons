@@ -1,0 +1,45 @@
+import type { IconProps } from "./icons.ts";
+import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
+
+export default function Transgender({ children: _, size = 24, ...props }: IconProps): JSX.Element {
+  return jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: `${size}`,
+    height: `${size}`,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    ...props,
+    children: [
+      jsx("path", {
+        d: "M12 16v6",
+      }),
+      jsx("path", {
+        d: "M14 20h-4",
+      }),
+      jsx("path", {
+        d: "M18 2h4v4",
+      }),
+      jsx("path", {
+        d: "m2 2 7.17 7.17",
+      }),
+      jsx("path", {
+        d: "M2 5.355V2h3.357",
+      }),
+      jsx("path", {
+        d: "m22 2-7.17 7.17",
+      }),
+      jsx("path", {
+        d: "M8 5 5 8",
+      }),
+      jsx("circle", {
+        cx: "12",
+        cy: "12",
+        r: "4",
+      }),
+    ],
+  });
+}

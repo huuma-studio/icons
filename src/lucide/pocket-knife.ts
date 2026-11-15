@@ -1,0 +1,34 @@
+import type { IconProps } from "./icons.ts";
+import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
+
+export default function PocketKnife({ children: _, size = 24, ...props }: IconProps): JSX.Element {
+  return jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: `${size}`,
+    height: `${size}`,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    ...props,
+    children: [
+      jsx("path", {
+        d: "M3 2v1c0 1 2 1 2 2S3 6 3 7s2 1 2 2-2 1-2 2 2 1 2 2",
+      }),
+      jsx("path", {
+        d: "M18 6h.01",
+      }),
+      jsx("path", {
+        d: "M6 18h.01",
+      }),
+      jsx("path", {
+        d: "M20.83 8.83a4 4 0 0 0-5.66-5.66l-12 12a4 4 0 1 0 5.66 5.66Z",
+      }),
+      jsx("path", {
+        d: "M18 11.66V22a4 4 0 0 0 4-4V6",
+      }),
+    ],
+  });
+}

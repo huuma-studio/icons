@@ -1,0 +1,34 @@
+import type { IconProps } from "./icons.ts";
+import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
+
+export default function Anvil({ children: _, size = 24, ...props }: IconProps): JSX.Element {
+  return jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: `${size}`,
+    height: `${size}`,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    ...props,
+    children: [
+      jsx("path", {
+        d: "M7 10H6a4 4 0 0 1-4-4 1 1 0 0 1 1-1h4",
+      }),
+      jsx("path", {
+        d: "M7 5a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1 7 7 0 0 1-7 7H8a1 1 0 0 1-1-1z",
+      }),
+      jsx("path", {
+        d: "M9 12v5",
+      }),
+      jsx("path", {
+        d: "M15 12v5",
+      }),
+      jsx("path", {
+        d: "M5 20a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3 1 1 0 0 1-1 1H6a1 1 0 0 1-1-1",
+      }),
+    ],
+  });
+}

@@ -1,0 +1,36 @@
+import type { IconProps } from "./icons.ts";
+import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
+
+export default function VenusAndMars({ children: _, size = 24, ...props }: IconProps): JSX.Element {
+  return jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: `${size}`,
+    height: `${size}`,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    ...props,
+    children: [
+      jsx("path", {
+        d: "M10 20h4",
+      }),
+      jsx("path", {
+        d: "M12 16v6",
+      }),
+      jsx("path", {
+        d: "M17 2h4v4",
+      }),
+      jsx("path", {
+        d: "m21 2-5.46 5.46",
+      }),
+      jsx("circle", {
+        cx: "12",
+        cy: "11",
+        r: "5",
+      }),
+    ],
+  });
+}

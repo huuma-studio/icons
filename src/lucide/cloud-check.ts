@@ -1,0 +1,25 @@
+import type { IconProps } from "./icons.ts";
+import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
+
+export default function CloudCheck({ children: _, size = 24, ...props }: IconProps): JSX.Element {
+  return jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: `${size}`,
+    height: `${size}`,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    ...props,
+    children: [
+      jsx("path", {
+        d: "m17 15-5.5 5.5L9 18",
+      }),
+      jsx("path", {
+        d: "M5.516 16.07A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 3.501 7.327",
+      }),
+    ],
+  });
+}
