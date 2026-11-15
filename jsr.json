@@ -1,7 +1,7 @@
 {
   "name": "@huuma/icons",
+  "version": "0.3.0",
   "license": "MIT",
-  "version": "0.1.5",
   "exports": {
     "./pixelarticons/4g": "./src/pixelarticons/4g.ts",
     "./pixelarticons/4k-box": "./src/pixelarticons/4k-box.ts",
@@ -2185,11 +2185,7 @@
     "./lucide/zoom-in": "./src/lucide/zoom-in.tsx",
     "./lucide/zoom-out": "./src/lucide/zoom-out.tsx"
   },
-  "imports": {
-    "@huuma/ui": "jsr:@huuma/ui@^0.2.1"
-  },
-  "compilerOptions": {
-    "jsx": "precompile",
-    "jsxImportSource": "@huuma/ui"
+  "publish": {
+    "include": ["src", "README.md", "LICENSE"]
   }
 }

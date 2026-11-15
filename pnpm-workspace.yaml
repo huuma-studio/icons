@@ -1,0 +1,17 @@
+allowBuilds:
+  esbuild: true
+
+overrides:
+  vite@*: "catalog:"
+
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@1.6.0
+  vite-plus: 1.6.0
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: "*"
+minimumReleaseAgeExclude:
+  - "@jsr/huuma__route@0.3.2"
+  - "@jsr/huuma__ui@0.3.0"

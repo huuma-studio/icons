@@ -53,3 +53,17 @@ All icon libraries used in this project are open-source and licensed under permi
 
 - **Pixelarticons**: Created by the Pixelarticons team. Thank you for providing this excellent open-source icon library.
 - **Lucide**: Created by the Lucide community, forked from Feather Icons by Cole Bemis. Thank you for providing this excellent open-source icon library.
+
+## Development
+
+`package.json` holds development tooling only; the package is published to JSR from `jsr.json`.
+Development uses [Vite+](https://viteplus.dev) (`vp`), configured in `vite.config.ts`.
+
+```bash
+vp install
+vp check            # format, lint and type check (`vp check --fix` to fix)
+vp run jsr:dry-run  # every check JSR publish runs, including slow types
+```
+
+Each Lucide icon starts with `/** @jsxImportSource @huuma/ui */`, so it compiles for Huuma UI
+whatever JSX settings the app has.
