@@ -1,0 +1,33 @@
+import type { IconProps } from "./icons.ts";
+import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
+
+export default function Coins({ children: _, size = 24, ...props }: IconProps): JSX.Element {
+  return jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: `${size}`,
+    height: `${size}`,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    ...props,
+    children: [
+      jsx("path", {
+        d: "M13.744 17.736a6 6 0 1 1-7.48-7.48",
+      }),
+      jsx("path", {
+        d: "M15 6h1v4",
+      }),
+      jsx("path", {
+        d: "m6.134 14.768.866-.5 2 3.464",
+      }),
+      jsx("circle", {
+        cx: "16",
+        cy: "8",
+        r: "6",
+      }),
+    ],
+  });
+}

@@ -1,9 +1,6 @@
 import { defineConfig } from "vite-plus";
 
 export default defineConfig({
-  oxc: {
-    jsx: { runtime: "automatic", importSource: "@huuma/ui" },
-  },
   lint: {
     options: { typeAware: true, typeCheck: true },
     rules: {

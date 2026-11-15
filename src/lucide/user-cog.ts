@@ -1,0 +1,56 @@
+import type { IconProps } from "./icons.ts";
+import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
+
+export default function UserCog({ children: _, size = 24, ...props }: IconProps): JSX.Element {
+  return jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: `${size}`,
+    height: `${size}`,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    ...props,
+    children: [
+      jsx("path", {
+        d: "M10 15H6a4 4 0 0 0-4 4v2",
+      }),
+      jsx("path", {
+        d: "m14.305 16.53.923-.382",
+      }),
+      jsx("path", {
+        d: "m15.228 13.852-.923-.383",
+      }),
+      jsx("path", {
+        d: "m16.852 12.228-.383-.923",
+      }),
+      jsx("path", {
+        d: "m16.852 17.772-.383.924",
+      }),
+      jsx("path", {
+        d: "m19.148 12.228.383-.923",
+      }),
+      jsx("path", {
+        d: "m19.53 18.696-.382-.924",
+      }),
+      jsx("path", {
+        d: "m20.772 13.852.924-.383",
+      }),
+      jsx("path", {
+        d: "m20.772 16.148.924.383",
+      }),
+      jsx("circle", {
+        cx: "18",
+        cy: "15",
+        r: "3",
+      }),
+      jsx("circle", {
+        cx: "9",
+        cy: "7",
+        r: "4",
+      }),
+    ],
+  });
+}

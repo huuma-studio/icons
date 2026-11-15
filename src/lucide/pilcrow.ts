@@ -1,0 +1,28 @@
+import type { IconProps } from "./icons.ts";
+import { type JSX, jsx } from "@huuma/ui/jsx-runtime";
+
+export default function Pilcrow({ children: _, size = 24, ...props }: IconProps): JSX.Element {
+  return jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: `${size}`,
+    height: `${size}`,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    ...props,
+    children: [
+      jsx("path", {
+        d: "M13 4v16",
+      }),
+      jsx("path", {
+        d: "M17 4v16",
+      }),
+      jsx("path", {
+        d: "M19 4H9.5a4.5 4.5 0 0 0 0 9H13",
+      }),
+    ],
+  });
+}
