@@ -2,6 +2,28 @@
 
 This library provides various icon libraries for use in your Huuma UI project. All icons are sourced from open-source projects with permissive licenses.
 
+## Development
+
+Install [Vite+](https://viteplus.dev/guide/) and use the pinned Node.js and pnpm versions:
+
+```sh
+vp install
+vp check
+```
+
+`vp check` checks formatting, lint rules, and TypeScript types. Use `vp fmt` to format files and `vp lint` to run lint and type checks separately.
+
+## Publishing
+
+The package is published as TypeScript source to [JSR](https://jsr.io/@huuma/icons). Package metadata, icon exports, and the publishing file list are defined in `jsr.json`; `package.json` configures development dependencies and commands. No build step is required.
+
+```sh
+vp run publish:check
+vp run release
+```
+
+`publish:check` validates the package without uploading it. To release a new version, update `version` in `jsr.json`. CI runs checks and a publishing dry run for pull requests and pushes to `main`, then publishes pushes to `main` using JSR's GitHub OIDC authentication.
+
 ## Icon Libraries
 
 ### Pixelarticons
@@ -53,17 +75,3 @@ All icon libraries used in this project are open-source and licensed under permi
 
 - **Pixelarticons**: Created by the Pixelarticons team. Thank you for providing this excellent open-source icon library.
 - **Lucide**: Created by the Lucide community, forked from Feather Icons by Cole Bemis. Thank you for providing this excellent open-source icon library.
-
-## Development
-
-`package.json` holds development tooling only; the package is published to JSR from `jsr.json`.
-Development uses [Vite+](https://viteplus.dev) (`vp`), configured in `vite.config.ts`.
-
-```bash
-vp install
-vp check            # format, lint and type check (`vp check --fix` to fix)
-vp run jsr:dry-run  # every check JSR publish runs, including slow types
-```
-
-Each Lucide icon starts with `/** @jsxImportSource @huuma/ui */`, so it compiles for Huuma UI
-whatever JSX settings the app has.

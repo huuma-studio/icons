@@ -1,20 +1,16 @@
 {
-  // Type checking and editor support only; nothing is compiled.
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "jsx": "react-jsx",
-    "jsxImportSource": "@huuma/ui",
+    "types": ["node"],
     "strict": true,
     "noEmit": true,
     "allowImportingTsExtensions": true,
-    "isolatedModules": true,
     "verbatimModuleSyntax": true,
-    // JSR rejects slow types: exports need explicit types.
-    "declaration": true,
-    "isolatedDeclarations": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@huuma/ui",
     "skipLibCheck": true
   },
   "include": ["src", "vite.config.ts"]

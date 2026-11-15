@@ -1,7 +1,7 @@
 {
   "name": "@huuma/icons",
-  "version": "0.3.0",
   "license": "MIT",
+  "version": "0.3.0",
   "exports": {
     "./pixelarticons/4g": "./src/pixelarticons/4g.ts",
     "./pixelarticons/4k-box": "./src/pixelarticons/4k-box.ts",
@@ -2184,6 +2184,10 @@
     "./lucide/zodiac-virgo": "./src/lucide/zodiac-virgo.tsx",
     "./lucide/zoom-in": "./src/lucide/zoom-in.tsx",
     "./lucide/zoom-out": "./src/lucide/zoom-out.tsx"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@huuma/ui"
   },
   "publish": {
     "include": ["src", "README.md", "LICENSE"]
